@@ -10,8 +10,7 @@ interface Props {
 	pokemon: Pokemon;
 }
 
-const PokemonPage: NextPage<Props> = ({ pokemon }) => {
-	console.log(pokemon);
+const PokemonPage: NextPage<Props> = ({ pokemon }) => { 
 	return (
 		<Layout title="Some pokemon">
 			<Grid.Container css={{ marginTop: "5px" }} gap={2}>
