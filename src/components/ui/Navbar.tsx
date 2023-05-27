@@ -3,10 +3,7 @@ import { useRouter } from "next/router";
 
 export const Navbar = () => {
 	const router = useRouter();
-	const { theme } = useTheme();
-	const onClick = () => {
-		router.push("/");
-	};
+	const { theme } = useTheme(); 
 	return (
 		<div
 			style={{
