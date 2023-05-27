@@ -34,7 +34,7 @@ export const Navbar = () => {
 			</Text>
 			<Spacer css={{ flex: 1 }} />
 			<Text color="white" h5>
-				Guillermo Cardona
+				Favoritos
 			</Text>
 		</div>
 	);

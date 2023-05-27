@@ -1,12 +1,13 @@
 import { GetStaticProps, NextPage } from "next";
 
-import { Layout } from "../components/layouts/";
-import { SmallPokemon } from "../interfaces/pokemon-list";
+import { Grid } from "@nextui-org/react";
+
+import { Layout } from "@/components/layouts/";
+import { SmallPokemon } from "@/interfaces/pokemon-list";
 
 import { PokemonListResponse } from "@/interfaces";
 import { pokeApi } from "@/api";
-import { Card, Col, Grid, Row, Text } from "@nextui-org/react";
-import { PokemonCard } from "@/components/Pokemon";
+import { PokemonCard } from "@/components/pokemon";
 
 interface Props {
 	pokemons: SmallPokemon[];
@@ -31,7 +32,6 @@ const HomePage: NextPage<Props> = ({ pokemons }) => {
 //- The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-	// const { data } = await  // your fetch function here
 	const { data } = await pokeApi.get<PokemonListResponse>("/pokemon?limit=151");
 	// https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/132.svg
 
