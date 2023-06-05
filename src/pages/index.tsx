@@ -45,7 +45,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 			image,
 		};
 	});
-	console.log(data);
+	// console.log(data);
 	return {
 		props: {
 			pokemons,
