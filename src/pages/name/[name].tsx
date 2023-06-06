@@ -10,7 +10,7 @@ import { Layout } from "@/components/layouts";
 import { pokeApi } from "@/api";
 
 import { Pokemon, PokemonListResponse } from "@/interfaces";
-import { localFavorites } from "@/utils";
+import { getPokemonInfo, localFavorites } from "@/utils";
 
 interface Props {
 	pokemon: Pokemon;
@@ -119,7 +119,7 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 	// then we create an array of paths with the params
 	const paths = data.results.map((pokemon) => ({
 		params: { name: pokemon.name },
-	})); 
+	}));
 
 	return {
 		paths,
@@ -130,11 +130,9 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const { name } = params as { name: string };
 
-	const { data } = await pokeApi.get<Pokemon>(`/pokemon/` + name);
-
 	return {
 		props: {
-			pokemon: data,
+			pokemon: await getPokemonInfo(name),
 		},
 	};
 };
