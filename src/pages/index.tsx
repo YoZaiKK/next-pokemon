@@ -7,7 +7,7 @@ import { SmallPokemon } from "@/interfaces/pokemon-list";
 
 import { PokemonListResponse } from "@/interfaces";
 import { pokeApi } from "@/api";
-import { PokemonCard } from "@/components/Pokemon"; 
+import { PokemonCard } from "@/components/pokemon"; 
 
 interface Props {
 	pokemons: SmallPokemon[];
