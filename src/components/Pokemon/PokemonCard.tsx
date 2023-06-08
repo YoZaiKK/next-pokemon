@@ -1,4 +1,4 @@
-import { SmallPokemon } from "@/interfaces";
+import { SmallPokemon } from "../../interfaces";
 import { Card, Row, Text, Grid } from "@nextui-org/react";
 import { useRouter } from "next/router";
 import { FC } from "react";

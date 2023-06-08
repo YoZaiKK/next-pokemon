@@ -6,11 +6,11 @@ import { Button, Card, Container, Grid, Image, Text } from "@nextui-org/react";
 
 import confetti from "canvas-confetti";
 
-import { Layout } from "@/components/layouts";
-import { pokeApi } from "@/api";
+import { Layout } from "../../components/layouts";
+import { pokeApi } from "../../api";
 
-import { Pokemon, PokemonListResponse } from "@/interfaces";
-import { getPokemonInfo, localFavorites } from "@/utils";
+import { Pokemon, PokemonListResponse } from "../../interfaces";
+import { getPokemonInfo, localFavorites } from "../../utils";
 
 interface Props {
 	pokemon: Pokemon;
