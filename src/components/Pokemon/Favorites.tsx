@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Grid } from "@nextui-org/react";
-import { FavoriteCardPokemon } from "../pokemon";
+import { FavoriteCardPokemon } from "./";
 
 interface Props {
 	pokemons: number[];
